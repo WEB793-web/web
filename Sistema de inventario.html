@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<head>
+    <title>Sistema de Registro de Inventario</title>
+</head>
+<body body bgcolor="#e0f7fa" text="#000000" face="Times New Roman">
+
+<h1>Tablas de Inventario de un Laboratorio Químico</h1>
+
+<fieldset>
+    <legend>Registro de Productos</legend>
+    <form action="#" method="post">
+        <label for="nombre">Nombre del Producto:</label>
+        <input type="text" id="nombre" name="nombre" required list="productos">
+        <datalist id="productos">
+            <option value="Ácido clorhídrico (HCl)">
+            <option value="Ácido sulfúrico (H₂SO₄)">
+            <option value="Hidróxido de sodio (NaOH)">
+            <option value="Nitrato de plata (AgNO₃)">
+            <option value="Permanganato de potasio (KMnO₄)">
+            <option value="Amoniaco (NH₃)">
+            <option value="Etanol (C₂H₅OH)">
+            <option value="Cloroformo (CHCl₃)">
+            <option value="Acetona (C₃H₆O)">
+            <option value="Benceno (C₆H₆)">
+            <option value="Ácido acético (CH₃COOH)">
+            <option value="Hidróxido de calcio (Ca(OH)₂)">
+        </datalist><br><br>
+        
+        <label for="tipo">Tipo de Producto:</label>
+        <select id="tipo" name="tipo" required>
+            <option value="quimico">Sustancia Química Común</option>
+            <option value="organico">Sustancia Orgánica</option>
+            <option value="gas">Gas</option>
+            <option value="material">Material de Laboratorio</option>
+            <option value="solucion">Solución/Mezcla Común</option>
+            <option value="limpieza">Producto de Limpieza y Seguridad</option>
+        </select>
+
+        <label for="cantidad">Cantidad:</label>
+        <input type="number" id="cantidad" name="cantidad" required min="1">
+
+        <label for="ubicacion">Ubicación:</label>
+        <input type="text" id="ubicacion" name="ubicacion">
+
+        <input type="submit" value="Agregar Producto">
+    </form>
+</fieldset>
+
+<fieldset>
+    <legend>Sustancias Químicas Comunes</legend>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Seleccionar</th>
+                <th>Nombre del Producto</th>
+                <th>Cantidad (L/Kg)</th>
+                <th>Ubicación</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><input type="checkbox" name="select"></td>
+                <td>Ácido clorhídrico (HCl)</td>
+                <td>10 L</td>
+                <td>Estante 1</td>
+                <td><button>Editar</button></td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="select"></td>
+                <td>Ácido sulfúrico (H₂SO₄)</td>
+                <td>3 L</td>
+                <td>Estante 1</td>
+                <td><button>Editar</button></td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="select"></td>
+                <td>Hidróxido de sodio (NaOH)</td>
+                <td>5 L</td>
+                <td>Estante 2</td>
+                <td><button>Editar</button></td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="select"></td>
+                <td>Nitrato de plata (AgNO₃)</td>
+                <td>2 Kg</td>
+                <td>Estante 3</td>
+                <td><button>Editar</button></td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="select"></td>
+                <td>Permanganato de potasio (KMnO₄)</td>
+                <td>4 Kg</td>
+                <td>Estante 4</td>
+                <td><button>Editar</button></td>
+            </tr>
+        </tbody>
+    </table>
+</fieldset>
+
+<fieldset>
+    <legend>Sustancias Orgánicas</legend>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Seleccionar</th>
+                <th>Nombre del Producto</th>
+                <th>Cantidad (L/Kg)</th>
+                <th>Ubicación</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><input type="checkbox" name="select"></td>
+                <td>Glucosa (C₆H₁₂O₆)</td>
+                <td>5 Kg</td>
+                <td>Estante 1</td>
+                <td><button>Editar</button></td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="select"></td>
+                <td>Ácido cítrico (C₆H₈O₇)</td>
+                <td>6 Kg</td>
+                <td>Estante 2</td>
+                <td><button>Editar</button></td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="select"></td>
+                <td>Metanol (CH₃OH)</td>
+                <td>2 L</td>
+                <td>Estante 3</td>
+                <td><button>Editar</button></td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="select"></td>
+                <td>Acetato de etilo (C₄H₈O₂)</td>
+                <td>3 L</td>
+                <td>Estante 4</td>
+                <td><button>Editar</button></td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="select"></td>
+                <td>Ácido fórmico (HCOOH)</td>
+                <td>4 L</td>
+                <td>Estante 1</td>
+                <td><button>Editar</button></td>
+            </tr>
+        </tbody>
+    </table>
+</fieldset>
+
+<fieldset>
+    <legend>Gases</legend>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Seleccionar</th>
+                <th>Nombre del Producto</th>
+                <th>Cantidad (L/Kg)</th>
+                <th>Ubicación</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><input type="checkbox" name="select"></td>
+                <td>Oxígeno (O₂)</td>
+                <td>20 L</td>
+                <td>Estante 1</td>
+                <td><button>Editar</button></td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="select"></td>
+                <td>Dióxido de carbono (CO₂)</td>
+                <td>10 L</td>
+                <td>Estante 2</td>
+                <td><button>Editar</button></td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="select"></td>
+                <td>Nitrógeno (N₂)</td>
+                <td>15 L</td>
+                <td>Estante 3</td>
+                <td><button>Editar</button></td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="select"></td>
+                <td>Hidrógeno (H₂)</td>
+                <td>8 L</td>
+                <td>Estante 4</td>
+                <td><button>Editar</button></td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="select"></td>
+                <td>Argón (Ar)</td>
+                <td>5 L</td>
+                <td>Estante 1</td>
+                <td><button>Editar</button></td>
+            </tr>
+        </tbody>
+    </table>
+</fieldset>
+
+<fieldset>
+    <legend>Materiales de Laboratorio</legend>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Seleccionar</th>
+                <th>Nombre del Producto</th>
+                <th>Cantidad (L/Kg)</th>
+                <th>Ubicación</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><input type="checkbox" name="select"></td>
+                <td>Pipetas</td>
+                <td>15 Kg</td>
+                <td>Estante 1</td>
+                <td><button>Editar</button></td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="select"></td>
+                <td>Matraces Erlenmeyer</td>
+                <td>10 Kg</td>
+                <td>Estante 2</td>
+                <td><button>Editar</button></td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="select"></td>
+                <td>Sondas graduadas</td>
+                <td>12 Kg</td>
+                <td>Estante 3</td>
+                <td><button>Editar</button></td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="select"></td>
+                <td>Tubos de ensayo</td>
+                <td>5 Kg</td>
+                <td>Estante 4</td>
+                <td><button>Editar</button></td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="select"></td>
+                <td>Vidrio de reloj</td>
+                <td>8 Kg</td>
+                <td>Estante 1</td>
+                <td><button>Editar</button></td>
+            </tr>
+        </tbody>
+    </table>
+</fieldset>
+
+<fieldset>
+    <legend>Soluciones y Mezclas Comunes</legend>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Seleccionar</th>
+                <th>Nombre del Producto</th>
+                <th>Cantidad (L/Kg)</th>
+                <th>Ubicación</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><input type="checkbox" name="select"></td>
+                <td>Solución salina (NaCl en agua)</td>
+                <td>8 L</td>
+                <td>Estante 1</td>
+                <td><button>Editar</button></td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="select"></td>
+                <td>Solución tampón de fosfato</td>
+                <td>5 L</td>
+                <td>Estante 2</td>
+                <td><button>Editar</button></td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="select"></td>
+                <td>Solución de azufre coloidal</td>
+                <td>6 L</td>
+                <td>Estante 3</td>
+                <td><button>Editar</button></td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="select"></td>
+                <td>Solución de hidróxido de amonio (NH₄OH)</td>
+                <td>4 L</td>
+                <td>Estante 4</td>
+                <td><button>Editar</button></td>
+            </tr>
+        </tbody>
+    </table>
+</fieldset>
+
+<fieldset>
+    <legend>Productos de Limpieza y Seguridad</legend>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Seleccionar</th>
+                <th>Nombre del Producto</th>
+                <th>Cantidad (L/Kg)</th>
+                <th>Ubicación</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><input type="checkbox" name="select"></td>
+                <td>Alcohol desinfectante (etanol 70%)</td>
+                <td>12 L</td>
+                <td>Estante 1</td>
+                <td><button>Editar</button></td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="select"></td>
+                <td>Solución de hipoclorito de sodio (lejía)</td>
+                <td>10 L</td>
+                <td>Estante 2</td>
+                <td><button>Editar</button></td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="select"></td>
+                <td>Guantes de látex</td>
+                <td>50 Kg</td>
+                <td>Estante 3</td>
+                <td><button>Editar</button></td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="select"></td>
+                <td>Máscaras de seguridad</td>
+                <td>25 Kg</td>
+                <td>Estante 4</td>
+                <td><button>Editar</button></td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="select"></td>
+                <td>Gafas de protección</td>
+                <td>20 Kg</td>
+                <td>Estante 1</td>
+                <td><button>Editar</button></td>
+            </tr>
+        </tbody>
+    </table>
+</fieldset>
+
+<h2>Editar Producto Seleccionado</h2>
+    <form action="" method="POST">
+        
+        <fieldset>
+            <legend>Editar Producto</legend>
+            <label for="edit_nombre">Nombre del Producto:</label>
+            <input list="productos" id="edit_nombre" name="edit_nombre" required>
+            <datalist id="productos">
+                <option value="Ácido clorhídrico (HCl)">
+                <option value="Ácido sulfúrico (H₂SO₄)">
+                <option value="Hidróxido de sodio (NaOH)">
+                <option value="Nitrato de plata (AgNO₃)">
+                <option value="Permanganato de potasio (KMnO₄)">
+                <option value="Amoniaco (NH₃)">
+                <option value="Etanol (C₂H₅OH)">
+                <option value="Cloroformo (CHCl₃)">
+                <option value="Acetona (C₃H₆O)">
+                <option value="Benceno (C₆H₆)">
+                <option value="Ácido acético (CH₃COOH)">
+                <option value="Hidróxido de calcio (Ca(OH)₂)">
+            </datalist><br><br>
+
+            <label for="edit_cantidad">Cantidad:</label>
+            <input type="number" id="edit_cantidad" name="edit_cantidad" required><br><br>
+
+            <label for="edit_tipo">Tipo de Producto:</label>
+            <select id="edit_tipo" name="edit_tipo" required>
+            <option value="quimico">Sustancia Química Común</option>
+            <option value="organico">Sustancia Orgánica</option>
+            <option value="gas">Gas</option>
+            <option value="material">Material de Laboratorio</option>
+            <option value="solucion">Solución/Mezcla Común</option>
+            <option value="limpieza">Producto de Limpieza y Seguridad</option>
+            </select>
+        </fieldset>
+
+
+        <input type="submit" value="Guardar Cambios">
+    </form>
+
+<footer>
+    <font size="2">&copy; 2024 Todos los derechos reservados.</font>
+</footer>
+
+
+</body>
+</html>
